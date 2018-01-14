@@ -33,12 +33,15 @@ int is_pixel_on(sfVector2f *pos, sfImage *image)
 
 void manage_indi_collide(individual_t *indi, sfImage *image, species_t *specie)
 {
+	int tmp = WH;
+
+	tmp -= OFFSET_COLLIDE;
 	if (indi->alive) {
 		if (is_pixel_on(indi->pos, image) \
 		    || indi->pos-> x >= WW - OFFSET_COLLIDE || \
 		    indi->pos->x <= OFFSET_COLLIDE ||	       \
 		    indi->pos->y <= OFFSET_COLLIDE || \
-		    indi->pos->y >= WH - OFFSET_COLLIDE) {
+		    indi->pos->y >= tmp) {
 			indi->alive = 0;
 			specie->nbr_alive -= 1;
 		}

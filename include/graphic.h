@@ -28,7 +28,7 @@
 #define START graph->started
 #define IS_IN_WINDOW(x, y) (x >= 0 || y >= 0 || x <= WW || y <= WH)
 
-#define OFFSET_COLLIDE SPEED + 1
+#define OFFSET_COLLIDE DRAWING_SQ_SIZE + 1
 
 typedef struct graph_t {
 	sfRenderWindow *window;

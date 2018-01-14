@@ -43,16 +43,6 @@ void update_indi(individual_t *indi, unsigned int frame)
 	}
 }
 
-//three direction
-
-/* if (indi->dna[frame] == LEFT) { */
-/* 	indi->move->x = indi->move->y * -1; */
-/* 	indi->move->y = tmp; */
-/* } */
-/* if (indi->dna[frame] == RIGHT) { */
-/* 	indi->move->x = indi->move->y; */
-/* 	indi->move->y = tmp *-1; */
-/* } */
 void update_species(graph_t *graph, species_t **species, unsigned int frame)
 {
 	for (int spec = 0; spec < NBR_SPECIES; spec++) {
